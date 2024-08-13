@@ -22,3 +22,18 @@
     #a46edb 82%
   );
 }
+
+.subheading-gradient {
+  background-image: linear-gradient(
+    to right,
+    #f87aff,
+    #fb93d0,
+    #ffdd99,
+    #c3f0b2,
+    #2fd8fe
+  );
+}
+
+.round-gradient {
+  background-image: radial-gradient(closest-side, #000 82%, #9560eb);
+}
