@@ -37,3 +37,21 @@
 .round-gradient {
   background-image: radial-gradient(closest-side, #000 82%, #9560eb);
 }
+
+.logo-ticker::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0));
+}
+
+.logo-ticker::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to left, #000, rgba(0, 0, 0, 0));
+}

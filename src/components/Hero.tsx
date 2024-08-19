@@ -1,7 +1,10 @@
+"use client";
+
 import { FaArrowRightLong } from "react-icons/fa6";
 import cursorImage from "@/assets/images/cursor.png";
 import messageImage from "@/assets/images/message.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -30,20 +33,35 @@ const Hero = () => {
             <h1 className="inline-flex text-7xl sm:text-9xl font-bold tracking-tighter text-center">
               One Task <br /> at a Time
             </h1>
-            <Image
-              src={cursorImage}
-              alt="Cursor Image"
-              height="200"
-              width="200"
-              className="absolute right-[476px] top-[108px] hidden sm:inline"
-            />
-            <Image
-              src={messageImage}
-              alt="Cursor Image"
-              height="200"
-              width="200"
-              className="absolute left-[498px] top-[56px] hidden sm:inline"
-            />
+            <motion.div
+              drag
+              dragSnapToOrigin
+              className="absolute right-[576px] top-[108px] hidden sm:inline "
+            >
+              <Image
+                src={cursorImage}
+                alt="Cursor Image"
+                height="200"
+                width="200"
+                className="max-w-none cursor-grab"
+                draggable="false"
+              />
+            </motion.div>
+
+            <motion.div
+              className="absolute left-[598px] top-[56px] hidden sm:inline"
+              drag
+              dragSnapToOrigin
+            >
+              <Image
+                src={messageImage}
+                alt="Cursor Image"
+                height="200"
+                width="200"
+                className="max-w-none cursor-grab"
+                draggable="false"
+              />
+            </motion.div>
           </div>
         </div>
 
